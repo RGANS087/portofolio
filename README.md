@@ -14,7 +14,7 @@ Website ini sudah **live**: [https://portofolio-livid-eta-98.vercel.app/](https:
 
 [![Portfolio Preview](./public/preview.png)](https://portofolio-livid-eta-98.vercel.app/)
 
-Klik gambar untuk buka live website.
+Klik gambar untuk membuka live website.
 
 ---
 
@@ -42,27 +42,28 @@ Klik gambar untuk buka live website.
 
 ## 🏗️ Project Structure
 
-.
+```text
+portofolio/
 ├── astro.config.mjs
 ├── LICENSE
 ├── package.json
 ├── package-lock.json
-├── public
-│   ├── favicon.ico
-│   └── favicon.svg
+├── public/
+│   ├── favicon.ico
+│   └── preview.png
 ├── README.md
-├── src
-│   ├── assets
-│   │   ├── astro.svg
-│   │   ├── background.svg
-│   │   └── bromo.webp
-│   ├── components
-│   │   ├── Home.astro
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   ├── pages
-│   │   └── index.astro
-│   └── styles
-│       └── global.css
+├── src/
+│   ├── assets/
+│   │   ├── astro.svg
+│   │   ├── background.svg
+│   │   └── bromo.webp
+│   ├── components/
+│   │   ├── Home.astro
+│   │   └── Welcome.astro
+│   ├── layouts/
+│   │   └── Layout.astro
+│   ├── pages/
+│   │   └── index.astro
+│   └── styles/
+│       └── global.css
 └── tsconfig.json
