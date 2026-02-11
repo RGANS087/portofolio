@@ -1,0 +1,288 @@
+---
+import akek from '../assets/bromo.webp';
+---
+
+<div>
+  <section id="profile" class="bg-slate-900 min-h-screen flex items-center px-4">
+    
+    <!-- NAVBAR -->
+    <nav class="absolute top-0 left-0 w-full z-50 bg-transparent">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
+        
+        <!-- Logo -->
+        <a href="/" class="text-slate-100 font-bold text-lg tracking-wider">
+          <i class="fa-regular fa-house"></i>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-8 text-slate-100 font-medium">
+          <a href="#profile" class="hover:text-amber-400 hover:underline transition-colors duration-300">
+            Home
+          </a>
+          <a href="#more" class="hover:text-amber-400 hover:underline transition-colors duration-300">
+            About
+          </a>
+          <a href="#contact" class="hover:text-amber-400 hover:underline transition-colors duration-300">
+            Contact
+          </a>
+        </div>
+
+        <!-- Mobile Hamburger -->
+        <button id="menuBtn" class="md:hidden text-slate-100 text-2xl">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu"
+           class="hidden md:hidden flex flex-col items-center gap-6 py-6 bg-slate-800/95 backdrop-blur-md text-slate-100 font-medium">
+        <a href="#profile">Home</a>
+        <a href="#more">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <div class="w-full max-w-6xl mx-auto">
+
+      <div class="flex flex-col md:flex-row items-center justify-center gap-10">
+
+        <!-- Text Kiri -->
+        <div class="flex flex-col items-center md:items-end md:mr-8 text-center md:text-right" data-aos="fade-right">
+          <h1 class="font-extrabold text-3xl md:text-5xl text-slate-100 hover-underline">
+            RAFLI
+          </h1>
+          <p class="text-slate-300 text-base md:text-lg mt-2 tracking-wide">
+            Web Developer
+          </p>
+        </div>
+
+        <!-- Foto -->
+        <img 
+          src={akek.src} 
+          alt="rafli wahyu" 
+          class="w-40 md:w-56 h-auto object-cover rounded-2xl shadow-xl"
+          data-aos="fade-down"
+        >
+
+        <!-- Text Kanan -->
+        <div class="flex flex-col items-center md:items-start md:ml-8 text-center md:text-left" data-aos="fade-left">
+          <p class="text-slate-300 text-base md:text-lg mb-2 tracking-wide">
+            Linux Enthusiast
+          </p>
+          <h1 class="font-extrabold text-3xl md:text-5xl text-slate-100 hover-underline">
+            WAHYU
+          </h1>
+        </div>
+
+      </div>
+
+      <!-- Tagline -->
+      <p class="mt-12 text-slate-300 text-lg text-center font-extrabold" data-aos="fade-up">
+        Web Developer • Linux Enthusiast • Exploring Technology
+      </p>
+
+    </div>
+  </section>
+
+	<!-- About Section -->
+	<section id="more" class="min-h-screen bg-slate-100 text-slate-900 py-20 px-6">
+	  <div class="max-w-6xl mx-auto">
+
+	    <!-- Heading -->
+	    <div class="text-center mb-16">
+	      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+	        About Me
+	      </h2>
+	      <p class="text-slate-600 max-w-2xl mx-auto">
+	        Background pendidikan dan pengalaman saya di bidang teknologi.
+	      </p>
+	    </div>
+
+	    <!-- Grid Content -->
+	    <div class="grid md:grid-cols-2 gap-12">
+
+	      <!-- Pendidikan -->
+	      <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+	      data-aos="zoom-in-up">
+	        <h3 class="text-xl font-semibold mb-4 text-slate-800">
+	          🎓 Pendidikan
+	        </h3>
+	        <p class="text-slate-600 leading-relaxed">
+	          SMKN 1 SUKOREJO jurusan Rekayasa Perangkat Lunak (RPL).  
+	          Fokus pada pengembangan website, basic JAVA, PHP websites, database MySQL,
+	          serta praktik langsung membangun sistem berbasis web.
+	        </p>
+	      </div>
+
+	      <!-- Pengalaman PKL -->
+	      <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+	      data-aos="zoom-in-up">
+	        <h3 class="text-xl font-semibold mb-4 text-slate-800">
+	          💼 Pengalaman PKL
+	        </h3>
+	        <p class="text-slate-600 leading-relaxed">
+	          Melakukan praktik kerja lapangan pada PT. YANMAR DIESEL INDONESIA.
+	          Ditempatkan pada divisi Tools dan bertugas menginput data barang keluar dan masuk,
+	          menginput surat jalan dan membuat tagihan P.O
+	        </p>
+	      </div>
+
+	      <!-- Skill -->
+	      <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+	      data-aos="zoom-in-up">
+	        <h3 class="text-xl font-semibold mb-4 text-slate-800">
+	          ⚡ Skill
+	        </h3>
+	        <ul class="text-slate-600 space-y-2">
+	          <li>• HTML, CSS, JavaScript</li>
+	          <li>• Laravel & Astro🚀</li>
+	          <li>• Tailwind CSS</li>
+	          <li>• Linux Environment</li>
+	        </ul>
+	      </div>
+
+	      <!-- Minat & Fokus -->
+	      <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition duration-300"
+	      data-aos="zoom-in-up">
+	        <h3 class="text-xl font-semibold mb-4 text-slate-800">
+	          🚀 Fokus Saat Ini
+	        </h3>
+	        <p class="text-slate-600 leading-relaxed">
+	          Mengembangkan portfolio profesional, memperdalam web
+	          development, serta meningkatkan pemahaman sistem Linux
+	          untuk mendukung performa sebagai Web Developer.
+	        </p>
+	      </div>
+
+	    </div>
+
+	  </div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="contact" class="bg-slate-800 text-slate-100 min-h-screen flex items-center px-6 py-20">
+	  <div class="max-w-4xl mx-auto w-full text-center">
+
+	    <!-- Heading -->
+	    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+	      Let's Work Together
+	    </h2>
+
+	    <p class="text-slate-300 mb-12 max-w-xl mx-auto">
+	      Saya terbuka untuk peluang kerja, kolaborasi, atau project freelance.
+	      Jangan ragu untuk menghubungi saya.
+	    </p>
+
+	    <!-- Contact Card -->
+	    <div class="bg-slate-700/60 backdrop-blur-md rounded-2xl p-8 shadow-lg"
+	    data-aos="flip-up">
+
+	      <div class="space-y-6 text-lg">
+
+	        <!-- Email -->
+	        <div>
+	          <p class="text-slate-400 text-sm mb-1">Email</p>
+	          <a href="mailto:rafliwahyu@proton.me"
+	             class="hover:text-amber-400 transition-colors duration-300">
+	            rafliwahyu@proton.me
+	          </a>
+	        </div>
+
+	        <!-- Github -->
+	        <div>
+	          <p class="text-slate-400 text-sm mb-1">GitHub</p>
+	          <a href="https://github.com/RGANS087"
+	             target="_blank"
+	             class="hover:text-amber-400 transition-colors duration-300">
+	            github.com/RGANS087
+	          </a>
+	        </div>
+
+	        <!-- Instagram -->
+	        <div>
+	          <p class="text-slate-400 text-sm mb-1">Instagram</p>
+	          <a href="https://instagram.com/rafl1wahyu__"
+	             target="_blank"
+	             class="hover:text-amber-400 transition-colors duration-300">
+	            @rafl1wahyu__
+	          </a>
+	        </div>
+
+	      </div>
+
+	    </div>
+
+	  </div>
+	</section>
+
+
+  <!-- Scroll To Top Button -->
+  <button
+    id="scrollTopBtn"
+    class="fixed bottom-6 right-6 z-50 hidden items-center justify-center w-12 h-12 rounded-full bg-slate-800 text-white shadow-lg hover:scale-110 hover:bg-slate-700 transition-all duration-300"
+  >
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // Scroll to top
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("scrollTopBtn");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          btn.classList.remove("hidden");
+          btn.classList.add("flex");
+        } else {
+          btn.classList.remove("flex");
+          btn.classList.add("hidden");
+        }
+      });
+
+      btn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      });
+    });
+
+    // Hamburger
+    document.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("menuBtn");
+      const menu = document.getElementById("mobileMenu");
+
+      btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    });
+  </script>
+</div>
+
+<!-- Social -->
+     <!-- <h1 class="italic text-white underline text-center mt-12"
+      	data-aos="fade-up">Contact Me:</h1>
+    <div class="flex justify-center" data-aos="fade-up">
+      <div class="flex gap-6 text-3xl md:text-4xl">
+        <a 
+          href="https://instagram.com/rafl1wahyu__" 
+          target="_blank"
+          title="Instagram" 
+          class="hover:scale-125 text-amber-400 hover:text-white hover:bg-amber-400 p-3 rounded-full transition-all duration-300 ease-in-out">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a 
+          href="https://github.com/RGANS087/" 
+          target="_blank"
+          title="Github" 
+          class="hover:scale-125 text-violet-600 hover:text-white hover:bg-violet-600 p-3 rounded-full transition-all duration-300 ease-in-out">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a 
+          href="mailto:rafliwahyu@proton.me" 
+          target="_blank" 
+          title="Email"
+          class="hover:scale-125 text-rose-600 hover:text-white hover:bg-rose-600 p-3 rounded-full transition-all duration-300 ease-in-out">
+          <i class="fa-regular fa-envelope"></i>
+        </a> -->

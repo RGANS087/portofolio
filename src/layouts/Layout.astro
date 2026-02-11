@@ -1,15 +1,31 @@
+---
+import '../styles/global.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+---
+
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Portofolio</title>
 	</head>
 	<body>
 		<slot />
+
+	<script>
+		import 'aos/dist/aos.css';
+		import AOS from 'aos';
+	  AOS.init({
+	    duration: 1000,
+	    once: false,
+	    mirror: true,
+	    easing: "ease-in-out"
+	  });
+	</script>
 	</body>
 </html>
 
