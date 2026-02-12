@@ -12,7 +12,7 @@ Website ini sudah **live**: [https://portofolio-livid-eta-98.vercel.app/](https:
 
 ## 🌐 Live Preview
 
-[![Portfolio Preview](./public/preview.png)](https://portofolio-livid-eta-98.vercel.app/)
+[![Portfolio Preview](./public/desktop.png)](https://portofolio-livid-eta-98.vercel.app/)
 
 Klik gambar untuk membuka live website.
 
