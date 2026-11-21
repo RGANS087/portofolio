@@ -1,0 +1,72 @@
+---
+const year = new Date().getFullYear();
+
+const links = [
+	{ href: '#home', label: 'Home' },
+	{ href: '#about', label: 'Tentang' },
+	{ href: '#projects', label: 'Proyek' },
+	{ href: '#contact', label: 'Kontak' },
+];
+
+const socials = [
+	{ href: 'https://github.com/RGANS087', icon: 'fa-brands fa-github', label: 'GitHub' },
+	{ href: 'https://instagram.com/rafl1wahyu__', icon: 'fa-brands fa-instagram', label: 'Instagram' },
+	{ href: 'mailto:rafliwahyu@proton.me', icon: 'fa-regular fa-envelope', label: 'Email' },
+];
+---
+
+<footer class="border-t border-white/5 bg-night-950 py-14 text-slate-400">
+	<div class="mx-auto max-w-6xl px-4 sm:px-6">
+		<div class="flex flex-col items-center gap-8 text-center">
+			<!-- Brand -->
+			<a href="#home" class="flex items-center gap-2.5">
+				<span
+					class="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-amber-400 to-orange-600 font-display text-sm font-bold text-night-950"
+				>
+					RW
+				</span>
+				<span class="font-display text-lg font-semibold tracking-tight text-white">
+					rafli<span class="text-amber-400">.</span>wahyu
+				</span>
+			</a>
+
+			<!-- Nav -->
+			<nav class="flex flex-wrap justify-center gap-x-8 gap-y-3">
+				{
+					links.map((link) => (
+						<a href={link.href} class="text-sm transition hover:text-amber-400">
+							{link.label}
+						</a>
+					))
+				}
+			</nav>
+
+			<!-- Socials -->
+			<div class="flex items-center gap-3">
+				{
+					socials.map((social) => (
+						<a
+							href={social.href}
+							target={social.href.startsWith('http') ? '_blank' : undefined}
+							rel="noopener noreferrer"
+							aria-label={social.label}
+							title={social.label}
+							class="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-400 transition hover:-translate-y-1 hover:border-amber-400/40 hover:text-amber-400"
+						>
+							<i class={social.icon}></i>
+						</a>
+					))
+				}
+			</div>
+		</div>
+
+		<div class="mt-10 border-t border-white/5 pt-8">
+			<p class="text-center text-sm text-slate-500">
+				&copy; {year} Rafli Wahyu &middot; Dibuat dengan
+				<i class="fa-solid fa-heart text-amber-400"></i>
+				menggunakan Astro &amp; Tailwind CSS
+			</p>
+			<p class="mt-2 text-center text-xs text-slate-600">Jawa Timur, Indonesia</p>
+		</div>
+	</div>
+</footer>

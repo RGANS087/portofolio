@@ -1,0 +1,120 @@
+---
+import heroImg from '../assets/bromo.webp';
+---
+
+<section id="home" class="relative flex min-h-screen items-center overflow-hidden">
+	<!-- Background photo -->
+	<img
+		src={heroImg.src}
+		alt="Rafli Wahyu berdiri di pegunungan berkabut"
+		fetchpriority="high"
+		class="absolute inset-0 h-full w-full object-cover"
+	/>
+	<div class="absolute inset-0 bg-gradient-to-b from-night-950/80 via-night-950/65 to-night-950"></div>
+	<div class="absolute inset-0 bg-grid"></div>
+
+	<!-- Ambient glow -->
+	<div
+		class="pointer-events-none absolute -top-24 left-1/2 h-96 w-[36rem] -translate-x-1/2 rounded-full bg-amber-500/10 blur-3xl animate-glow"
+	></div>
+	<div
+		class="pointer-events-none absolute -bottom-40 -right-24 h-80 w-80 rounded-full bg-orange-600/10 blur-3xl animate-glow"
+	></div>
+
+	<div class="relative mx-auto w-full max-w-6xl px-4 pb-28 pt-36 sm:px-6">
+		<div class="max-w-3xl">
+			<!-- Badge -->
+			<div
+				data-aos="fade-up"
+				class="mb-6 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm text-slate-300 backdrop-blur"
+			>
+				<span class="relative flex h-2 w-2">
+					<span
+						class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"
+					></span>
+					<span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+				</span>
+				Terbuka untuk peluang kerja &amp; kolaborasi
+			</div>
+
+			<!-- Headline -->
+			<h1
+				data-aos="fade-up"
+				data-aos-delay="100"
+				class="font-display text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-6xl lg:text-7xl"
+			>
+				Halo, saya<br />
+				<span class="text-gradient">Rafli Wahyu</span>
+			</h1>
+
+			<p
+				data-aos="fade-up"
+				data-aos-delay="200"
+				class="mt-6 max-w-xl text-base leading-relaxed text-slate-300 sm:text-lg"
+			>
+				Web Developer &amp; Linux Enthusiast dari Jawa Timur. Saya membangun website yang cepat,
+				modern, dan mudah dirawat dengan Astro, Laravel, dan Tailwind CSS.
+			</p>
+
+			<!-- CTAs -->
+			<div data-aos="fade-up" data-aos-delay="300" class="mt-10 flex flex-wrap items-center gap-4">
+				<a
+					href="#projects"
+					class="group inline-flex items-center gap-2 rounded-full bg-amber-400 px-7 py-3.5 text-sm font-semibold text-night-950 shadow-lg shadow-amber-500/25 transition hover:bg-amber-300"
+				>
+					Lihat Proyek
+					<i class="fa-solid fa-arrow-right transition-transform duration-300 group-hover:translate-x-1"></i>
+				</a>
+				<a
+					href="#contact"
+					class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur transition hover:border-amber-400/40 hover:text-amber-400"
+				>
+					<i class="fa-regular fa-paper-plane"></i>
+					Hubungi Saya
+				</a>
+			</div>
+
+			<!-- Socials -->
+			<div data-aos="fade-up" data-aos-delay="400" class="mt-12 flex items-center gap-3">
+				<a
+					href="https://github.com/RGANS087"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="GitHub"
+					title="GitHub"
+					class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 backdrop-blur transition hover:-translate-y-1 hover:border-amber-400/40 hover:text-amber-400"
+				>
+					<i class="fa-brands fa-github text-lg"></i>
+				</a>
+				<a
+					href="https://instagram.com/rafl1wahyu__"
+					target="_blank"
+					rel="noopener noreferrer"
+					aria-label="Instagram"
+					title="Instagram"
+					class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 backdrop-blur transition hover:-translate-y-1 hover:border-amber-400/40 hover:text-amber-400"
+				>
+					<i class="fa-brands fa-instagram text-lg"></i>
+				</a>
+				<a
+					href="mailto:rafliwahyu@proton.me"
+					aria-label="Email"
+					title="Email"
+					class="flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-300 backdrop-blur transition hover:-translate-y-1 hover:border-amber-400/40 hover:text-amber-400"
+				>
+					<i class="fa-regular fa-envelope text-lg"></i>
+				</a>
+				<span class="ml-2 hidden text-sm text-slate-400 sm:block">Temukan saya di sini</span>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scroll hint -->
+	<a
+		href="#about"
+		aria-label="Scroll ke bawah"
+		class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-slate-400 transition hover:text-amber-400"
+	>
+		<i class="fa-solid fa-chevron-down text-xl"></i>
+	</a>
+</section>

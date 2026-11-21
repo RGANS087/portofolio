@@ -1,0 +1,131 @@
+---
+const cards = [
+	{
+		icon: 'fa-graduation-cap',
+		title: 'Pendidikan',
+		text: 'SMKN 1 Sukorejo, jurusan Rekayasa Perangkat Lunak (RPL). Fokus pada pengembangan website, dasar Java & PHP, serta database MySQL dengan praktik langsung membangun sistem berbasis web.',
+	},
+	{
+		icon: 'fa-briefcase',
+		title: 'Pengalaman PKL',
+		text: 'Praktik Kerja Lapangan di PT. Yanmar Diesel Indonesia, divisi Tools — menangani input data barang keluar-masuk, surat jalan, dan tagihan P.O.',
+	},
+	{
+		icon: 'fa-rocket',
+		title: 'Fokus Saat Ini',
+		text: 'Memperdalam web development modern dan sistem Linux untuk mendukung performa sebagai Web Developer yang handal dan siap berkolaborasi.',
+	},
+];
+
+const skills = [
+	{ name: 'HTML & CSS', level: 90 },
+	{ name: 'JavaScript', level: 80 },
+	{ name: 'Tailwind CSS', level: 85 },
+	{ name: 'Laravel / PHP', level: 75 },
+	{ name: 'Astro', level: 70 },
+	{ name: 'Linux', level: 75 },
+];
+
+const tools = ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS', 'Laravel', 'Astro', 'PHP', 'Java', 'MySQL', 'Git & GitHub', 'Linux', 'VS Code'];
+---
+
+<section id="about" class="scroll-mt-24 bg-white py-24 text-slate-600">
+	<div class="mx-auto max-w-6xl px-4 sm:px-6">
+		<!-- Heading -->
+		<div class="max-w-2xl" data-aos="fade-up">
+			<p class="text-sm font-semibold uppercase tracking-[0.2em] text-amber-500">Tentang Saya</p>
+			<h2 class="mt-3 font-display text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+				Profil &amp; Latar Belakang
+			</h2>
+			<p class="mt-4 leading-relaxed text-slate-600">
+				Latar belakang pendidikan dan pengalaman saya di bidang teknologi, serta hal yang sedang
+				saya pelajari saat ini.
+			</p>
+		</div>
+
+		<!-- Cards -->
+		<div class="mt-12 grid gap-6 md:grid-cols-3">
+			{
+				cards.map((card, i) => (
+					<div
+						data-aos="fade-up"
+						data-aos-delay={i * 100}
+						class="group rounded-2xl border border-slate-200 bg-slate-50/60 p-7 transition duration-300 hover:-translate-y-1.5 hover:border-amber-300 hover:shadow-xl hover:shadow-amber-500/5"
+					>
+						<div
+							class="mb-5 flex h-12 w-12 items-center justify-center rounded-xl bg-amber-100 text-amber-600 transition group-hover:bg-amber-400 group-hover:text-night-950"
+						>
+							<i class={'fa-solid ' + card.icon + ' text-lg'}></i>
+						</div>
+						<h3 class="font-display text-lg font-semibold text-slate-900">{card.title}</h3>
+						<p class="mt-3 text-sm leading-relaxed text-slate-500">{card.text}</p>
+					</div>
+				))
+			}
+		</div>
+
+		<!-- Tools chips -->
+		<div data-aos="fade-up" class="mt-10 flex flex-wrap gap-2.5">
+			{
+				tools.map((tool) => (
+					<span
+						class="cursor-default rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-sm text-slate-600 transition hover:border-amber-300 hover:text-amber-600"
+					>
+						{tool}
+					</span>
+				))
+			}
+		</div>
+
+		<!-- Skills -->
+		<div class="mt-20" data-aos="fade-up">
+			<div class="flex items-end justify-between gap-6">
+				<div>
+					<h3 class="font-display text-2xl font-bold tracking-tight text-slate-900">
+						Kemampuan Teknis
+					</h3>
+					<p class="mt-2 text-sm text-slate-500">
+						Perkembangan skill yang saya terus asah melalui proyek nyata.
+					</p>
+				</div>
+			</div>
+
+			<div class="mt-8 grid gap-x-14 gap-y-7 md:grid-cols-2">
+				{
+					skills.map((skill) => (
+						<div>
+							<div class="mb-2 flex items-center justify-between text-sm font-medium">
+								<span class="text-slate-700">{skill.name}</span>
+								<span class="tabular-nums text-slate-400">{skill.level}%</span>
+							</div>
+							<div class="h-2 overflow-hidden rounded-full bg-slate-200">
+								<div
+									class="skill-fill h-full rounded-full bg-gradient-to-r from-amber-400 to-orange-500"
+									data-level={skill.level}
+								></div>
+							</div>
+						</div>
+					))
+				}
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// Animasikan skill bar hanya saat terlihat (threshold 0.5)
+		const bars = document.querySelectorAll('.skill-fill');
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						entry.target.style.width = entry.target.dataset.level + '%';
+						observer.unobserve(entry.target);
+					}
+				});
+			},
+			{ threshold: 0.5 },
+		);
+
+		bars.forEach((bar) => observer.observe(bar));
+	</script>
+</section>

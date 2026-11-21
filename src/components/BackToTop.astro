@@ -1,0 +1,26 @@
+<button
+	id="backToTop"
+	aria-label="Kembali ke atas"
+	title="Kembali ke atas"
+	class="pointer-events-none fixed bottom-6 right-6 z-40 flex h-12 w-12 translate-y-4 items-center justify-center rounded-full border border-white/10 bg-night-800/90 text-amber-400 opacity-0 shadow-xl backdrop-blur transition-all duration-300 hover:bg-amber-400 hover:text-night-950"
+>
+	<i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script>
+	const btn = document.getElementById('backToTop');
+
+	window.addEventListener(
+		'scroll',
+		() => {
+			const show = window.scrollY > 500;
+			btn.classList.toggle('opacity-0', !show);
+			btn.classList.toggle('pointer-events-none', !show);
+			btn.classList.toggle('translate-y-4', !show);
+			btn.classList.toggle('translate-y-0', show);
+		},
+		{ passive: true },
+	);
+
+	btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
